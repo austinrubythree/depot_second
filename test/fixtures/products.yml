@@ -11,7 +11,10 @@ two:
   description: MyText
   image_url: lorem.jpg
   price: 9.99
+<<<<<<< HEAD
   
+=======
+>>>>>>> 630fc90a8d65c13472e3bba237455efa410e49cd
 ruby:
   title:      Programming Ruby 1.9
   description:
