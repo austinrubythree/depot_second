@@ -19,6 +19,10 @@
     </header>
     <section class = 'content'>
       <nav class="side_nav">
+        <%# render cart AJAX %>
+        <div id="cart" class = "carts">
+          <%= render @cart %>
+        </div>
         <ul>
           <li><a href= "/">Home</li>
           <li><a href= "/questions">Questions</a></li>
