@@ -20,13 +20,13 @@
     <section class = 'content'>
       <nav class="side_nav">
         <%# render cart AJAX %>
-        <% if @cart %>
+        <%# <% if @cart %> %>
 
-          <div id="cart" class="carts">
-            <%= render @cart %>
-          </div>
+        <div id="cart" class="carts">
+          <%= render_if @cart && @cart.line_items.any?, @cart %>
+        </div>
 
-        <% end %>
+        <%# <% end %> %>
 
         <ul>
           <li><a href= "/">Home</li>
