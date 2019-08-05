@@ -13,6 +13,14 @@
           <p>
             <%= sanitize(product.description) %>
           </p>
+
+          <%# <% @reviews.each do |review| %> 
+            <!-- <div class = "reviews"> -->
+              <%# <div class = "star-rating" data-score= <%= review.rating %></div>
+              <!-- </div> -->
+          <%# <% end %>
+          <!-- </ul> -->
+
           <div class= "price">
             <%= number_to_currency(product.price) %>
             <%= button_to "Add to Cart", line_items_path(product_id: product),
@@ -23,3 +31,13 @@
     <%end%>
   <%end%>
 </ul>
+
+<script>
+  $('.star-rating').raty({
+    path:'/assets',
+    readOnly: true,
+    score: function(){
+      return $(this).attr('data-score')
+    }
+  })
+  </script>

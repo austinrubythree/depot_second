@@ -33,7 +33,8 @@
           <li><a href= "/questions">Questions</a></li>
           <li><a href= "/news">News</a></li>
           <li><a href= "/contact">Contact</a></li>
-          <%= Time.new.strftime("%I:%M %p") %>
+          <li><%= Time.new.strftime("%I:%M %p") %></li>
+          <li><%= link_to("Logout", destroy_user_session_path, method: :delete) %></li>
       </nav>
                   <main class='<%= controller.controller_name %>'>
         <%= yield %>

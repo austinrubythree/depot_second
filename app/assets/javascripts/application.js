@@ -14,3 +14,24 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery.raty
+
+$(function(){
+  $('.star_rating').click(function(){
+    var star = $(this);
+    var form_id = #(this).attr('data-form-id')
+    var stars = $(this).attr('data-stars');
+
+    for(i=1; i<=5; i++){
+      if(i <= stars){
+        $('#', + product_id + '-' + i).addClass('on')
+      } else {
+        $('#', + product_id + '-' + i).removeClass('on')
+      }
+    }
+    // $.ajax({
+    //   type: "post",
+    //   url: $
+    // })
+  })
+});
